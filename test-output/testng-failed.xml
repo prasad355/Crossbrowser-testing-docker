@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="classes" name="FirefoxTest(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="docker.TestCase2">
+        <methods>
+          <include name="terminate"/>
+          <include name="test"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="startDockerGrid"/>
+          <include name="stopDockergrid"/>
+        </methods>
+      </class> <!-- docker.TestCase2 -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+  <test thread-count="2" parallel="classes" name="edge(failed)">
+    <parameter name="browser" value="MicrosoftEdge"/>
+    <classes>
+      <class name="docker.TestCase3">
+        <methods>
+          <include name="terminate"/>
+          <include name="test"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="startDockerGrid"/>
+          <include name="stopDockergrid"/>
+        </methods>
+      </class> <!-- docker.TestCase3 -->
+    </classes>
+  </test> <!-- edge(failed) -->
+</suite> <!-- Failed suite [Suite] -->
